@@ -1,0 +1,7 @@
+*.exe
+*.dll
+*.pdb
+*.cache
+*.config
+*.json
+.vscode/
