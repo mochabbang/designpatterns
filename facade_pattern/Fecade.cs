@@ -1,5 +1,5 @@
 using System;
-namespace designpatterns.fecade_pattern
+namespace designpatterns.facade_pattern
 {
     public class Fecade
     {
@@ -33,7 +33,7 @@ namespace designpatterns.fecade_pattern
             dvdPlayer.On();
             dvdPlayer.Play(movieName);
         }
-        public void endMovie() {
+        public void EndMovie() {
             Console.WriteLine("==== 영화 시청 끝 ====");
             light.On();
             screen.Up();

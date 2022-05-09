@@ -1,6 +1,5 @@
-using Internal;
 using System;
-namespace designpatterns.fecade_pattern
+namespace designpatterns.facade_pattern
 {
     public class SubSystem
     {
