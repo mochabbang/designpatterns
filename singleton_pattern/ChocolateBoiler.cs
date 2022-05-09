@@ -4,7 +4,7 @@ namespace designpatterns.singleton_pattern
     {
         private bool empty;
         private bool boiled;
-        private static ChocolateBoiler chocolateBoiler;
+        private static ChocolateBoiler chocolateBoiler = null;
 
         private ChocolateBoiler() {
             empty = true;
