@@ -1,15 +1,18 @@
 using System;
 namespace designpatterns.template_method_pattern
 {
-    public abstract class CaffeineBeverage
+    public class CaffeinBeverageWithHook
     {
-        // sealed (C#) = final (java)
         public void PrepareRecipe() 
         {
             BoilWater();
             Brew();
             PourInCur();
-            AddCondiments();
+            if(CustomerWantsCondiments())
+            {
+                AddCondiments();
+            }
+            
         }
 
         // 우려내기!
@@ -20,12 +23,21 @@ namespace designpatterns.template_method_pattern
 
         public void BoilWater() 
         {
-            Console.WriteLine("물 끓이는 중");
+            Consolele.WriteLine("물 끓이는 중");
         }
 
         public void PourInCur()
         {
             Console.WriteLine("컵에 따르는 중");
+        }
+
+        // Hook 메소드
+        /*
+         * 후크(Hook)는 추상 클래스에서 선언되지만 기본적인 내용만 구현! 아무 코드가 들어있지 않는 메소드
+         */
+        public bool CustomerWantsCondiments() 
+        {
+            return true;
         }
     }
 }

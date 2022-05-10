@@ -9,7 +9,8 @@ namespace designpatterns
         public static void Main(string[] args) {
             //_program = new observer_pattern.ObserverPatternProgram();
             //_program = new adapter_pattern.DuckTestDrive();
-            _program = new facade_pattern.FacadePatternProgram();
+            //_program = new facade_pattern.FacadePatternProgram();
+            _program = new template_method_pattern.TemplatePatternProgram();
 
             _program.Execute();
         }
