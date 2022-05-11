@@ -5,8 +5,5 @@
 *.config
 *.json
 .vscode/
-obj/Debug/net6.0/designpatterns.csproj.CoreCompileInputs.cache
-obj/Debug/net6.0/designpatterns.dll
-obj/Debug/net6.0/designpatterns.pdb
-obj/Debug/net6.0/ref/designpatterns.dll
-obj/Debug/net6.0/refint/designpatterns.dll
+.obj/
+.debug/
