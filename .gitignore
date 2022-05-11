@@ -4,6 +4,9 @@
 *.cache
 *.config
 *.json
+*.props
+*.targets
 .vscode/
+.bin/
 .obj/
-.debug/
+.obj/Debug

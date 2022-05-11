@@ -13,7 +13,7 @@ namespace designpatterns.template_method_pattern
             Console.WriteLine("설탕과 우유를 추가하는 중");
         }
 
-        public bool CustomerWantsCondiments()
+        public override bool CustomerWantsCondiments()
         {
             string answer = GetUserInput();
 
@@ -31,7 +31,7 @@ namespace designpatterns.template_method_pattern
         {
             Console.Write("커피에 우유와 설탕을 넣을까요? (y/n) ?");
             
-            string answer = Console.Read();
+            string answer = Console.ReadLine();
 
             return answer;
         }
