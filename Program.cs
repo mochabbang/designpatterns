@@ -7,10 +7,15 @@ namespace designpatterns
     {
         private static IProgram _program = null;
         public static void Main(string[] args) {
+            /* 옵저버 패턴 */
             //_program = new observer_pattern.ObserverPatternProgram();
+            /* 어댑터 패턴 */
             //_program = new adapter_pattern.DuckTestDrive();
+            /* 퍼사드 패턴 */
             //_program = new facade_pattern.FacadePatternProgram();
-            _program = new template_method_pattern.TemplatePatternProgram();
+            /* 템플릿 메소드 */
+            //_program = new template_method_pattern.TemplatePatternProgram();
+            _program = new template_method_pattern.DuckSortTestDrive();
 
             _program.Execute();
         }
