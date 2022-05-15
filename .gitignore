@@ -6,7 +6,9 @@
 *.json
 *.props
 *.targets
+bin
+obj
 .vscode/
 .bin/
 .obj/
-.obj/Debug
+
