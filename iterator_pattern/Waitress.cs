@@ -3,10 +3,10 @@ namespace designpatterns.iterator_pattern
 {
     public class Waitress
     {
-        PancakeHouseMenu pancakeHouseMenu;
-        DinerMenu dinerMenu;
+        IMenu pancakeHouseMenu;
+        IMenu dinerMenu;
 
-        public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu)
+        public Waitress(IMenu pancakeHouseMenu, IMenu dinerMenu)
         {
             this.pancakeHouseMenu = pancakeHouseMenu;
             this.dinerMenu = dinerMenu;

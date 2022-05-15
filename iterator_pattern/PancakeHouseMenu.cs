@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 namespace designpatterns.iterator_pattern
 {
-    public class PancakeHouseMenu
+    public class PancakeHouseMenu: IMenu
     {
         List<MenuItem> menuItems;
 

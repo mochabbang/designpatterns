@@ -1,7 +1,7 @@
 using System;
 namespace designpatterns.iterator_pattern
 {
-    public class DinerMenu
+    public class DinerMenu: IMenu
     {
         private static int MAX_ITEMS = 6;
         int numberOfItems = 0;
