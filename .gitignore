@@ -1,7 +1,8 @@
 *.exe
-*.dll
-*.pdb
 *.cache
+*.dll
+*.exe
+*.pdb
 *.config
 *.json
 *.props
