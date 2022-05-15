@@ -15,7 +15,10 @@ namespace designpatterns
             //_program = new facade_pattern.FacadePatternProgram();
             /* 템플릿 메소드 */
             //_program = new template_method_pattern.TemplatePatternProgram();
-            _program = new template_method_pattern.DuckSortTestDrive();
+            //_program = new template_method_pattern.DuckSortTestDrive();
+
+            /* 반복자 패턴 */
+            _program = new iterator_pattern.MenuTestDrive();
 
             _program.Execute();
         }
