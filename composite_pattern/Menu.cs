@@ -1,4 +1,3 @@
-using Internal;
 using System;
 using System.ComponentModel.Design;
 namespace designpatterns.composite_pattern
@@ -42,7 +41,7 @@ namespace designpatterns.composite_pattern
 
         public override void Print()
         {
-            Console.WriteLine("\n" + GetName());
+            Console.Write("\n" + GetName());
             Console.WriteLine(", " + GetDescription());
             Console.WriteLine("----------------------");
 

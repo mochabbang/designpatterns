@@ -1,4 +1,3 @@
-using Internal;
 using System;
 namespace designpatterns.composite_pattern
 {
@@ -39,10 +38,10 @@ namespace designpatterns.composite_pattern
 
         public override void Print()
         {
-            Console.WriteLine(" " + GetName());
+            Console.Write(" " + GetName());
             if(IsVegetarian()) 
             {
-                Console.WriteLine("(v)");
+                Console.Write("(v)");
             }
             Console.WriteLine(", " + GetPrice());
             Console.WriteLine("     -- " + GetDescription());
