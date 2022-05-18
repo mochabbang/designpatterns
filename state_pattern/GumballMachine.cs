@@ -5,24 +5,33 @@ namespace designpatterns.state_pattern
     public class GumballMachine
     {
         /// 매진
-        private static int SOLD_OUT = 0;
+        private IState soldOutState;
         /// 동전 없음
-        private static int NO_QUATER = 1;
+        private IState noQuaterState;
         /// 동전 있음
-        private static int HAS_QUATER = 2;
+        private IState hasQuaterState;
         /// 판매
-        private static int SOLD = 3;
+        private IState soldState;
 
-        int state = SOLD_OUT;
+        private IState state;
         int count = 0;
 
-        public GumballMachine(int count) {
-            this.count = count;
+        public GumballMachine(int numberGumball) {
+            noQuaterState = new NoQuaterState(this);
+            hasQuaterState = new HasQuarterState(this);
+            soldOutState = new SoldOutState(this);
+            soldState = new SoldState(this);
 
-            if (count > 0) {
-                state = NO_QUATER;
+            this.count = numberGumball;
+            if (numberGumball > 0) 
+            {
+                state = noQuaterState;
             }
-        } 
+            else 
+            {
+                state = soldOutState;
+            }
+        }         
 
         /// <summary>요약 : 동전 넣기</summary>
         public void insertQuater()
@@ -114,6 +123,28 @@ namespace designpatterns.state_pattern
             stringBuilder.AppendLine("동전 투입 대기중");
 
             return stringBuilder.ToString();
+        }
+
+        public void SetState(IState state)
+        {
+            this.state = state;
+        }
+
+        public IState GetHasQuarterState()
+        {
+            return hasQuaterState;
+        }
+
+        public IState GetNoQuaterState() {
+            return noQuaterState;
+        }
+
+        public IState GetSoldState() {
+            return soldState;
+        }
+
+        public IState GetSoldOutState() {
+            return soldOutState;
         }
     }
 }
