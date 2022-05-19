@@ -2,6 +2,7 @@ namespace designpatterns.state_pattern
 {
     public class HasQuarterState: IState
     {
+        Random random = new Random();
         GumballMachine gumballMachine;
 
         public HasQuarterState(GumballMachine gumballMachine)
@@ -23,6 +24,15 @@ namespace designpatterns.state_pattern
         public void TurnCrank() 
         {
               Console.WriteLine("손잡이를 돌리셨습니다.");
+              int winner = random.Next(10);
+              
+              if((winner == 0) && (gumballMachine.GetCount() > 1)) {
+                  gumballMachine.SetState(gumballMachine.GetWinnerState());
+              }
+              else {
+                  gumballMachine.SetState(gumballMachine.GetSoldOutState());
+              }
+
               gumballMachine.SetState(gumballMachine.GetSoldState());
         }
 

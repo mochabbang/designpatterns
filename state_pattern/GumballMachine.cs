@@ -13,6 +13,8 @@ namespace designpatterns.state_pattern
         /// 판매
         private IState soldState;
 
+        private IState winnerState;
+
         private IState state;
         int count = 0;
 
@@ -21,6 +23,7 @@ namespace designpatterns.state_pattern
             hasQuaterState = new HasQuarterState(this);
             soldOutState = new SoldOutState(this);
             soldState = new SoldState(this);
+            winnerState = new WinnerState(this);
 
             this.count = numberGumball;
             if (numberGumball > 0) 
@@ -76,26 +79,36 @@ namespace designpatterns.state_pattern
             }
         }
 
+        // 카운트 : 뽑기가능한 상품
         public int GetCount()
         {
             return this.count;
         }
 
+        // 동전을 삽입했을 때 상태
         public IState GetHasQuarterState()
         {
             return hasQuaterState;
         }
 
+        // 동전이 없을 때 상태
         public IState GetNoQuaterState() {
             return noQuaterState;
         }
 
+        // 상품 판매 (내보내기) 상태
         public IState GetSoldState() {
             return soldState;
         }
 
+        // 상품 매진 상태
         public IState GetSoldOutState() {
             return soldOutState;
+        }
+
+        // 보너스 상품!
+        public IState GetWinnerState() {
+            return winnerState;
         }
     }
 }
