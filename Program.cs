@@ -19,9 +19,9 @@ namespace designpatterns
             /* 반복자 패턴 */
             //_program = new iterator_pattern.MenuTestDrive();
             /* 컴포지트 패턴 */
-            _program = new composite_pattern.MenuTestDrive();
+            // _program = new composite_pattern.MenuTestDrive();
             /* 상태 패턴 */
-            //_program = new state_pattern.GumballMachineTestDrive();
+            _program = new state_pattern.GumballMachineTestDrive();
 
             _program.Execute();
         }

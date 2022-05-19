@@ -9,26 +9,26 @@ namespace designpatterns.state_pattern
             this.gumballMachine = gumballMachine;
         }
 
-         void InsertQuater() 
-         {
+        public void InsertQuater() 
+        {
              Console.WriteLine("동전은 한 개만 넣어 주세요.");
-         }
+        }
 
-         void EjectQuater() 
-         {
+        public void EjectQuater() 
+        {
              Console.WriteLine("동전이 반환됩니다.");
-             gumballMachine.SetState(gumballMachine.NoQuarterState());
-         }
+             gumballMachine.SetState(gumballMachine.GetNoQuaterState());
+        }
 
-         void TurnCrank() 
-         {
+        public void TurnCrank() 
+        {
               Console.WriteLine("손잡이를 돌리셨습니다.");
               gumballMachine.SetState(gumballMachine.GetSoldState());
-         }
+        }
 
-         void Dispense() 
-         {
+        public void Dispense() 
+        {
               Console.WriteLine("알맹이를 내보낼 수 없습니다.");
-         }
+        }
     }
 }

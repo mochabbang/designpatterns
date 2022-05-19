@@ -2,12 +2,30 @@ namespace designpatterns.state_pattern
 {
     public class SoldOutState: IState
     {
-         void InsertQuater() {}
+        GumballMachine gumballMachine;
+        public SoldOutState(GumballMachine gumballMachine)
+        {
+            this.gumballMachine = gumballMachine;
+        }
 
-         void EjectQuater() {}
+         public void InsertQuater() 
+         {
+            Console.WriteLine("매진되었습니다. 다음 기회에 이용해 주세요.");
+         }
 
-         void TurnCrank() {}
+         public void EjectQuater() 
+         {
+            Console.WriteLine("동전을 넣지 않으셨습니다. 동전이 반환되지 않습니다.");
+         }
 
-         void Dispense() {}
+         public void TurnCrank() 
+         {
+            Console.WriteLine("매진 되었습니다.");
+         }
+
+         public void Dispense() 
+         {
+            Console.WriteLine("매진입니다.");
+         }
     }
 }

@@ -11,6 +11,7 @@ namespace designpatterns.state_pattern
 
             gumballMachine.insertQuater();
             gumballMachine.turnCrank();
+            Console.WriteLine("==========================");
 
             Console.WriteLine(gumballMachine);
 
@@ -18,6 +19,8 @@ namespace designpatterns.state_pattern
             gumballMachine.ejectQuater();
             gumballMachine.turnCrank();
 
+            Console.WriteLine("==========================");
+
             Console.WriteLine(gumballMachine);
 
             gumballMachine.insertQuater();
@@ -26,6 +29,8 @@ namespace designpatterns.state_pattern
             gumballMachine.turnCrank();
             gumballMachine.ejectQuater();
 
+            Console.WriteLine("==========================");
+
             Console.WriteLine(gumballMachine);
 
             gumballMachine.insertQuater();
@@ -36,6 +41,8 @@ namespace designpatterns.state_pattern
             gumballMachine.insertQuater();
             gumballMachine.turnCrank();
 
+            Console.WriteLine("==========================");
+            
             Console.WriteLine(gumballMachine);
         }
     }

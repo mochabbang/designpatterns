@@ -1,31 +1,31 @@
-using Internal;
 using System;
 namespace designpatterns.state_pattern
 {
     public class NoQuaterState: IState
     {
+        GumballMachine gumballMachine;
         public NoQuaterState(GumballMachine gumballMachine)
         {
-            GumballMachine gumballMachine = gumballMachine;
+            this.gumballMachine = gumballMachine;
         }
 
-        void InsertQuater() 
+        public void InsertQuater() 
         {
             Console.WriteLine("동전을 넣으셨습니다.");
-            this.SetState(gumballMachine.GetHasQuarterState());
+            gumballMachine.SetState(gumballMachine.GetHasQuarterState());
         }
 
-        void EjectQuater() 
+        public void EjectQuater() 
         {
             Console.WriteLine("동전을 넣어 주세요.");
         }
 
-        void TurnCrank() 
+        public void TurnCrank() 
         {
             Console.WriteLine("동전을 넣어주세요.");
         }
 
-        void Dispense() 
+        public void Dispense() 
         {
             Console.WriteLine("동전을 넣어주세요.");
         }
