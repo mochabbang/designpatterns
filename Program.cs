@@ -21,7 +21,9 @@ namespace designpatterns
             /* 컴포지트 패턴 */
             // _program = new composite_pattern.MenuTestDrive();
             /* 상태 패턴 */
-            _program = new state_pattern.GumballMachineTestDrive();
+            //_program = new state_pattern.GumballMachineTestDrive();
+            /* 프록시 패턴 */
+            _program = new proxy_pattern.ProxyGumballMachineTestDrive();
 
             _program.Execute();
         }
