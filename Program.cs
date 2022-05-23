@@ -23,7 +23,9 @@ namespace designpatterns
             /* 상태 패턴 */
             //_program = new state_pattern.GumballMachineTestDrive();
             /* 프록시 패턴 */
-            _program = new proxy_pattern.ProxyGumballMachineTestDrive();
+            //_program = new proxy_pattern.ProxyGumballMachineTestDrive();
+            /* 복합 패턴 */
+            _program = new mix_pattern.DuckSimulator();
 
             _program.Execute();
         }
