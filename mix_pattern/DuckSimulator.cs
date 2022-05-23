@@ -36,13 +36,47 @@ namespace designpatterns.mix_pattern
             // Goose Adpater!
             IQuackable gooseDuck = new GooseAdapter(new Goose());
             
-            Console.WriteLine("\n오리 시뮬레이션 게임(+ 추상팩토리)");
+            Console.WriteLine("\n오리 시뮬레이션 게임(+ 컴포지트)");
+            Flock flockOfDucks = new Flock();
 
-            simulate(mallardDuck);
-            simulate(redheadDuck);
-            simulate(duckCall);
-            simulate(rubberDuck);
-            simulate(gooseDuck);
+            flockOfDucks.Add(redheadDuck);
+            flockOfDucks.Add(duckCall);
+            flockOfDucks.Add(rubberDuck);
+            flockOfDucks.Add(gooseDuck);
+
+            Flock flockOfMallards = new Flock();
+
+            IQuackable mallardOne = duckFactory.createMallardDuck();
+            IQuackable mallardTwo = duckFactory.createMallardDuck();
+            IQuackable mallardThree = duckFactory.createMallardDuck();
+            IQuackable mallardFour = duckFactory.createMallardDuck();
+
+            flockOfMallards.Add(mallardOne);
+            flockOfMallards.Add(mallardTwo);
+            flockOfMallards.Add(mallardThree);
+            flockOfMallards.Add(mallardFour);
+
+            flockOfDucks.Add(flockOfMallards);
+
+            // Console.WriteLine("\n오리 시뮬레이션 게임: 전체 무리");
+            // simulate(flockOfDucks);
+
+            // Console.WriteLine("\n오리 시뮬레이션 게임: 물오리 무리");
+            // simulate(flockOfMallards);
+
+            Console.WriteLine("\n오리 시뮬레이션 게임(+ 옵저버)");
+            Quacklogist quacklogist = new Quacklogist();
+            flockOfDucks.RegisterObserver(quacklogist);
+
+            simulate(flockOfDucks);
+
+            // Console.WriteLine("\n오리 시뮬레이션 게임(+ 추상팩토리)");
+
+            // simulate(mallardDuck);
+            // simulate(redheadDuck);
+            // simulate(duckCall);
+            // simulate(rubberDuck);
+            // simulate(gooseDuck);
 
             Console.WriteLine("오리가 소리 낸 횟수: " + QuackCounter.GetQuacks() + " 번");
         }

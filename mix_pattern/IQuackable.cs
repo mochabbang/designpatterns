@@ -1,6 +1,6 @@
 namespace designpatterns.mix_pattern
 {
-    public interface IQuackable
+    public interface IQuackable: IQuackObserverable
     {
          public void Quack();
     }

@@ -4,11 +4,14 @@ namespace designpatterns.mix_pattern
     public class QuackCounter: IQuackable
     {
         IQuackable duck;
+
+        Observable observable;
         static int numberOfQuacks;
 
         public QuackCounter(IQuackable duck)
         {
             this.duck = duck;
+            observable = new Observable(this);
             numberOfQuacks = 0;
         } 
 
@@ -21,6 +24,16 @@ namespace designpatterns.mix_pattern
         public static int GetQuacks()
         {
             return numberOfQuacks;
+        }
+
+        public void RegisterObserver(IObserver observer)
+        {
+            observable.RegisterObserver(observer);
+        }
+
+        public void NotifyObservers()
+        {
+            observable.NotifyObservers();
         }
     }
 }
