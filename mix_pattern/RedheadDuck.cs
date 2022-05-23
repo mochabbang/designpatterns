@@ -5,9 +5,13 @@ namespace designpatterns.mix_pattern
     {
         Observable observable;
 
+        string name;
+
         public RedheadDuck()
         {
             observable = new Observable(this);
+
+            this.name = "붉은머리오리";
         }
 
         public void Quack()
@@ -24,6 +28,11 @@ namespace designpatterns.mix_pattern
         public void NotifyObservers()
         {
             observable.NotifyObservers();
+        }
+
+        public override string ToString()
+        {
+            return name;
         }
     }
 }

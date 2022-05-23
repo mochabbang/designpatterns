@@ -16,7 +16,18 @@ namespace designpatterns.mix_pattern
             foreach(IQuackable quacker in quackers)
             {
                 quacker.Quack();
+                quacker.NotifyObservers();
             }
         }
+
+        public void RegisterObserver(IObserver observer)
+        {
+            foreach (IQuackable quacker in quackers)
+            {
+                quacker.RegisterObserver(observer);
+            }
+        }
+
+        public void NotifyObservers(){}
     }
 }

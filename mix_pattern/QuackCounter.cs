@@ -35,5 +35,10 @@ namespace designpatterns.mix_pattern
         {
             observable.NotifyObservers();
         }
+
+        public override string ToString()
+        {
+            return duck.ToString();
+        }
     }
 }

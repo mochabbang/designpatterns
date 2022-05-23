@@ -5,7 +5,7 @@ namespace designpatterns.mix_pattern
     {
         public void Update(IQuackObserverable duck)
         {
-            Console.WriteLine("꽥꽥학자: " + duck + "가 방금 소리냈다.");
+            Console.WriteLine("꽥꽥학자: " + duck.ToString() + "가 방금 소리냈다.");
         }
     }
 }

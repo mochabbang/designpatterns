@@ -15,7 +15,6 @@ namespace designpatterns.mix_pattern
         public void Quack()
         {
             goose.honk();
-            NotifyObservers();
         }
 
         public void RegisterObserver(IObserver observer)
@@ -26,6 +25,11 @@ namespace designpatterns.mix_pattern
         public void NotifyObservers()
         {
             observable.NotifyObservers();
+        }
+
+        public override string ToString()
+        {
+            return goose.GetGooseName();
         }
     }
 }

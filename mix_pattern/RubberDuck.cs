@@ -4,10 +4,12 @@ namespace designpatterns.mix_pattern
     public class RubberDuck: IQuackable
     {
         Observable observable;
+        string name;
 
         public RubberDuck()
         {
             observable = new Observable(this);
+            this.name = "고무오리";
         }
 
         public void Quack()
@@ -24,6 +26,11 @@ namespace designpatterns.mix_pattern
         public void NotifyObservers()
         {
             observable.NotifyObservers();
+        }
+
+        public override string ToString()
+        {
+            return name;
         }
     }
 }
