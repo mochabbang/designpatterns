@@ -25,7 +25,11 @@ namespace designpatterns
             /* 프록시 패턴 */
             //_program = new proxy_pattern.ProxyGumballMachineTestDrive();
             /* 복합 패턴 */
-            _program = new mix_pattern.DuckSimulator();
+            //_program = new mix_pattern.DuckSimulator();
+            /* 전략 패턴 */
+            //_program = new stratege_pattern.StrategeExecute();
+            /* 데코레이터 패턴 */
+            _program = new decorator_pattern.Executedecoratorpattern();
 
             _program.Execute();
         }

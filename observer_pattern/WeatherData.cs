@@ -40,6 +40,9 @@ namespace designpatterns.observer_pattern
             measurementsChanged();
         }
 
-        
+        public float GetPressue()
+        {
+            return pressure;
+        }
     }
 }
