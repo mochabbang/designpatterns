@@ -6,7 +6,8 @@ namespace designpatterns
     public class Program
     {
         private static IProgram _program = null;
-        public static void Main(string[] args) {
+        public static void Main(string[] args)
+        {
             /* 옵저버 패턴 */
             //_program = new observer_pattern.ObserverPatternProgram();
             /* 어댑터 패턴 */
@@ -29,10 +30,12 @@ namespace designpatterns
             /* 전략 패턴 */
             //_program = new stratege_pattern.StrategeExecute();
             /* 데코레이터 패턴 */
-            _program = new decorator_pattern.Executedecoratorpattern();
+            //_program = new decorator_pattern.Executedecoratorpattern();
+            /* 팩토리 패턴 */
+            _program = new factory_pattern.ExcuteFactory();
 
             _program.Execute();
         }
-        
+
     }
 }
